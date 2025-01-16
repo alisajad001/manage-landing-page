@@ -1,21 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.bg-pattern {
+  background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-tablet-pattern-0e35LkSA3fG4mvYSekJHBoiZigdIEn.svg');
+  background-repeat: no-repeat;
+  background-size: 800px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.bg-pattern-top {
+  background-position: 120% -5%;
+}
+
+.bg-pattern-bottom {
+  background-position: -60% 100%;
+}
+
+.bg-cta-desktop {
+  background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-simplify-section-desktop-qDPqmPCsk5aGxXScJmz5ec0URGLaY9.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-cta-mobile {
+  background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-simplify-section-mobile-lRvTCXLIM1QcVQzXcp8R3iNFF8AoFy.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@media (max-width: 768px) {
+  .bg-pattern {
+    background-size: 500px;
+  }
+
+  .bg-pattern-top {
+    background-position: 50px -50px;
+  }
+
+  .bg-pattern-bottom {
+    background-position: 200% 100%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Testimonials Bullet */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  bottom: 20px !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: hsl(12, 88%, 59%);
+  opacity: 1;
+}
+
+span.swiper-pagination-bullet {
+  background-color: hsla(12, 88%, 59%, 0.315);
+  opacity: 1;
+  margin-top: 20px;
 }
