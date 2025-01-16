@@ -60,7 +60,7 @@ export default function Testimonials() {
                 </h3>
 
                 <p className="text-dark-grayish-blue text-sm leading-relaxed flex-1">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
               </div>
             </SwiperSlide>
