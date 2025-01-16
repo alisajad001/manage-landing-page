@@ -54,4 +54,47 @@ const features = [
   },
 ];
 
-export { testimonials, features, navLinks };
+const socialIcons = [
+  {
+    name: 'Facebook',
+    icon: '/images/icon-facebook.svg',
+  },
+  {
+    name: 'YouTube',
+    icon: '/images/icon-youtube.svg',
+  },
+  {
+    name: 'Twitter',
+    icon: '/images/icon-twitter.svg',
+  },
+  {
+    name: 'Pinterest',
+    icon: '/images/icon-pinterest.svg',
+  },
+  {
+    name: 'Instagram',
+    icon: '/images/icon-instagram.svg',
+  },
+];
+
+const footerLinks = [
+  {
+    title: 'Home',
+    links: [
+      { name: 'Home', url: '/home' },
+      { name: 'Pricing', url: '/pricing' },
+      { name: 'Products', url: '/products' },
+      { name: 'About Us', url: '/about' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { name: 'Careers', url: '/careers' },
+      { name: 'Community', url: '/community' },
+      { name: 'Privacy Policy', url: '/privacy' },
+    ],
+  },
+];
+
+export { testimonials, features, navLinks, socialIcons, footerLinks };

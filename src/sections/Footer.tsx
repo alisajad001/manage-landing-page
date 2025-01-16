@@ -2,49 +2,8 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const socialIcons = [
-  {
-    name: 'Facebook',
-    icon: '/images/icon-facebook.svg',
-  },
-  {
-    name: 'YouTube',
-    icon: '/images/icon-youtube.svg',
-  },
-  {
-    name: 'Twitter',
-    icon: '/images/icon-twitter.svg',
-  },
-  {
-    name: 'Pinterest',
-    icon: '/images/icon-pinterest.svg',
-  },
-  {
-    name: 'Instagram',
-    icon: '/images/icon-instagram.svg',
-  },
-];
-
-const footerLinks = [
-  {
-    title: 'Home',
-    links: [
-      { name: 'Home', url: '/home' },
-      { name: 'Pricing', url: '/pricing' },
-      { name: 'Products', url: '/products' },
-      { name: 'About Us', url: '/about' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { name: 'Careers', url: '/careers' },
-      { name: 'Community', url: '/community' },
-      { name: 'Privacy Policy', url: '/privacy' },
-    ],
-  },
-];
+import { socialIcons } from '@/utils/data';
+import { footerLinks } from '@/utils/data';
 
 export default function Footer() {
   return (
@@ -82,30 +41,27 @@ export default function Footer() {
 
           <nav className="md:col-span-5 md:order-2 grid grid-cols-2 gap-8 text-white">
             <div className="space-y-3">
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Home
-              </Link>
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Pricing
-              </Link>
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Products
-              </Link>
-              <Link href="/" className="block hover:text-[#F3603C]">
-                About Us
-              </Link>
+              {footerLinks[0].links.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  className="block hover:text-[#F3603C]"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
 
             <div className="space-y-3">
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Careers
-              </Link>
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Community
-              </Link>
-              <Link href="/" className="block hover:text-[#F3603C]">
-                Privacy Policy
-              </Link>
+              {footerLinks[1].links.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  className="block hover:text-[#F3603C]"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </nav>
 
